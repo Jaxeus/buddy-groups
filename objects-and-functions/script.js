@@ -3,9 +3,9 @@ console.log('Connected ⚡');
 // ! Objects
 
 const person = {
-  firstName: 'Jason',
-  lastName: 'Cluley',
-  age: 14,
+  firstName: 'Jack',
+  lastName: 'Bauer',
+  age: 40,
 };
 
 // ? const person = {...}
@@ -13,11 +13,11 @@ const person = {
 
 // ? {...} --> code block containing properties/key:value pairs
 
-// ? firstName: 'Jason' / age: 14 --> properties ('key: value' pairs)
+// ? firstName: 'Jack' / age: 40 --> properties ('key: value' pairs)
 
 // ? firstName / lastName / age --> key(s)
 
-// ? 'Jason' / 'Cluley' / 14 --> value(s)
+// ? 'Jack' / 'Bauer' / 40 --> value(s)
 
 // ? , --> comma separating properties, not semi-colon like css
 
@@ -134,10 +134,10 @@ function handleClick(e) {
 
 // ! This keyword
 
-const jason = {
-  firstName: 'Jason',
-  lastName: 'Cluley',
-  age: 36,
+const jack = {
+  firstName: 'Jack',
+  lastName: 'Bauer',
+  age: 40,
   favouriteFood: 'Lobster Mornay',
   jobTitle: 'Support Worker',
   description: function () {
@@ -153,10 +153,10 @@ const jason = {
   },
 };
 
-// jason.age = 37;
-// jason.jobTitle = 'Web Developer';
+// jack.age = 41;
+// jack.jobTitle = 'Web Developer';
 
-console.log(jason.description());
+console.log(jack.description());
 
 // const thisPerson = document.getElementById('this-person');
 // const infoBlock = document.querySelector('.info-block');
@@ -164,17 +164,7 @@ console.log(jason.description());
 // infoBlock.style.backgroundColor = 'black';
 // infoBlock.style.color = 'lightgreen';
 // infoBlock.style.fontSize = '24px';
-// thisPerson.textContent = jason.firstName;
-// infoBlock.textContent = jason.description();
+// thisPerson.textContent = jack.firstName;
+// infoBlock.textContent = jack.description();
 
-const str = ' georges jason christopher';
-console.log(str);
 
-const myStr = str
-  // .trim()
-  .split(' ')
-  .map((w) => {
-    return w[0].toUpperCase();
-  });
-
-console.log(myStr);
