@@ -1,0 +1,185 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+h1 {
+  padding: 20px;
+}
+
+#container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#children-card-container {
+  margin-left: 40px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: salmon;
+  border: solid black 2px;
+  text-align: center;
+}
+
+#user {
+  margin-top: 20px;
+  color: #4122cf;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.list-item {
+  /* width: 130px; */
+  background-color: lightgreen;
+  color: darkred;
+  margin: 20px;
+  padding: 10px 30px;
+  list-style: none;
+  font-weight: 700;
+  text-align: center;
+}
+
+#form-container {
+  width: 500px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+input {
+  width: 200px;
+  padding: 2px 10px;
+  margin: 5px 0;
+  text-align: center;
+  background-color: rgba(255, 182, 193, 0.3);
+  border: solid black 1px;
+}
+
+#submit-btn {
+  width: 100px;
+  margin: 10px 0 0 50px;
+}
+
+#heading-container {
+  display: flex;
+  align-items: center;
+}
+
+#friend-names {
+  text-align: center;
+  width: 350px;
+  margin-left: 50px;
+  background-color: yellow;
+  display: inline-block;
+  padding: 5px 20px;
+  border: solid purple 3px;
+  color: purple;
+}
+
+.press-me {
+  width: 130px;
+  margin-left: 30px;
+  padding: 5px 10px;
+  background-color: red;
+  color: #fff;
+  border: solid black 2px;
+  border-radius: 5px;
+  /* font-weight: bolder; */
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.press-me:hover {
+  /* background-color: #ff4e4e; */
+  background-color: #b60000;
+  font-weight: bolder;
+  /* color: blue; */
+}
+.press-me:active {
+  background-color: green;
+}
+
+.event-container {
+  margin-left: 30px;
+}
+
+.event-button {
+  margin-left: 20px;
+  padding: 10px 10px;
+  background-color: lime;
+  border: solid blue 3px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.dot {
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+}
+
+/* This cards */
+
+#this-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#this-card-container {
+  margin: 30px 50px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: plum;
+  border: solid black 2px;
+  text-align: center;
+}
+
+#this-person {
+  margin-top: 20px;
+  color: yellow;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+#class-container {
+  margin: 10px 0 200px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.class-card {
+  margin: 10px 10px;
+  height: 300px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: plum;
+  border: solid black 2px;
+  text-align: center;
+}
+
+.class-person {
+  margin-top: 20px;
+  color: yellow;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 30px;
+}
