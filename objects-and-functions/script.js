@@ -74,30 +74,30 @@ const submitBtn = document.getElementById('submit-btn'); // button "Submit"
 
 // * Dynamic Object linked with form, dynamic function linked with object
 
-// Make PRESS ME button respond to click and carry out function below
-// submitBtn.addEventListener('click', submitForm);
+// ! Make PRESS ME button respond to click and carry out function below
+submitBtn.addEventListener('click', submitForm);
 
-// // submitForm function used in 'Submit' button
-// function submitForm(e) {
-//   // object within function this time
-//   const user = {
-//     Username: 'Ash',
-//     firstChild: inputEl1.value,
-//     secondChild: inputEl2.value,
-//     thirdChild: inputEl3.value,
-//   };
+// submitForm function used in 'Submit' button
+function submitForm(e) {
+  // object within function this time
+  const user = {
+    Username: 'Ash',
+    firstChild: inputEl1.value,
+    secondChild: inputEl2.value,
+    thirdChild: inputEl3.value,
+  };
 
-//   // console log
-//   console.log('Clicked! 🐁');
-//   // prevent default behaviour (submit)
-//   e.preventDefault();
+  // console log
+  console.log('Clicked! 🐁');
+  // prevent default behaviour (submit)
+  e.preventDefault();
 
-//   // Change text on username card to data input into form
-//   userName.textContent = user.Username;
-//   listOne.textContent = user.firstChild;
-//   listTwo.textContent = user.secondChild;
-//   listThree.textContent = user.thirdChild;
-// }
+  // Change text on username card to data input into form
+  userName.textContent = user.Username;
+  listOne.textContent = user.firstChild;
+  listTwo.textContent = user.secondChild;
+  listThree.textContent = user.thirdChild;
+}
 
 // ! Event.target
 
@@ -110,18 +110,19 @@ dotBtn.addEventListener('click', handleClick);
 targetBtn.addEventListener('click', handleClick);
 
 function handleClick(e) {
-  // console.log(e.target);
+  console.log(e.target);
   console.log('Clicked event-button!');
   console.log(e);
   console.log(e.target);
 
+  // ! comment this one out if you want the next to work
   // e.target.style.backgroundColor = 'orange';
 
-  // if (e.target.style.backgroundColor !== 'orange') {
-  //   e.target.style.backgroundColor = 'orange';
-  // } else {
-  //   e.target.style.backgroundColor = 'lime';
-  // }
+  if (e.target.style.backgroundColor !== 'orange') {
+    e.target.style.backgroundColor = 'orange';
+  } else {
+    e.target.style.backgroundColor = 'lime';
+  }
 
   if (e.target.textContent === 'Event') {
     document.body.style.backgroundColor = 'lightblue';
@@ -158,6 +159,7 @@ const jack = {
 
 console.log(jack.description());
 
+// * Uncomment the below if you want it to work
 // const thisPerson = document.getElementById('this-person');
 // const infoBlock = document.querySelector('.info-block');
 
@@ -166,5 +168,3 @@ console.log(jack.description());
 // infoBlock.style.fontSize = '24px';
 // thisPerson.textContent = jack.firstName;
 // infoBlock.textContent = jack.description();
-
-

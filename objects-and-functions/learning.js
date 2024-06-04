@@ -29,11 +29,11 @@ function createString(parameter1, parameter2) {
 // ! Example of using a function showing on the browser
 
 // * Reassignable string using called function
-// let createdString = createString('Mickey', 'Minnie');
-// console.log('Declared string: ', createdString);
+let createdString = createString('Mickey', 'Minnie');
+console.log('Declared string: ', createdString);
 
-// createdString = createString('Wirt', 'Greg');
-// console.log('Reassigned string: ', createdString);
+createdString = createString('Wirt', 'Greg');
+console.log('Reassigned string: ', createdString);
 
 // * Retrieving elements from HTML
 // Heading "Friend Names"
