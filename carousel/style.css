@@ -4,3 +4,30 @@
   align-items: center;
   gap: 30px;
 }
+
+.image-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 500px;
+  position: relative;
+}
+
+.image {
+  transform: translateX(0px);
+  opacity: 0.5;
+  position: absolute;
+}
+
+.image-1 {
+  transform: translateX(400px);
+  opacity: 0;
+  transition: 1s;
+}
+
+.image-3 {
+  transform: translateX(-400px);
+  opacity: 0;
+  transition: 1s;
+}
