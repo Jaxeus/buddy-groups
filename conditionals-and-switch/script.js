@@ -2,29 +2,29 @@
 
 console.log('connected 🔦');
 
-// Changing bgc to light-grey
+// ~ Changing bgc to light-grey
 document.body.style.backgroundColor = 'rgb(238, 238, 238)';
 
-// Selecting HTML Elements
+// ~ Selecting HTML Elements
 const lvlUpBtn = document.querySelector('.lvl-up-btn');
 const counter = document.querySelector('.counter');
 const modeBtn = document.querySelector('.mode-btn');
 const counterDisplay = document.querySelector('.counter-display');
 const loopDisplay = document.querySelector('.loop-display');
 
-// Changing lvl up button and counter styles
+// ~ Changing lvl up button and counter styles
 lvlUpBtn.style =
   'color: blue; background-color: hotpink; padding: 5px 10px; border-radius: 7px; font-weight: bold; border: 2px darkgreen solid;';
 counter.style =
   'display: inline-block; width: 70px; text-align: center;  padding: 5px 20px; border-radius: 5px; background-color: lightgoldenrodyellow; color: darkgreen; font-weight: bold; border: 2px blue solid;';
 
-// Setting count as 0 so that function can change count on each click
+// ~ Setting count as 0 so that function can change count on each click
 let count = 0;
 
-// Function for lvl-up button to increase the count of counter by one each click
+// ~ Function for lvl-up button to increase the count of counter by one each click
 function increaseCount() {
   count === 5 ? (count = 0) : count++;
-  // If count === 5 ? (then perform) : otherwise perform this
+  // ~ If count === 5 ? (then perform) : otherwise perform this
   // ! Ternary
   counter.textContent = count;
 
@@ -61,10 +61,10 @@ function increaseCount() {
   }
 }
 
-// Adding event listener for lvl up button through JS instead of onclick
+// ~ Adding event listener for lvl up button through JS instead of onclick
 lvlUpBtn.addEventListener('click', increaseCount);
 
-// Dark-mode: #3b3b3b Light-mode: #eeeeee
+// ? Dark-mode: #3b3b3b Light-mode: #eeeeee
 const darkMode = 'rgb(59, 59, 59)';
 const lightMode = 'rgb(238, 238, 238)';
 
@@ -96,7 +96,7 @@ modeBtn.addEventListener('click', toggleMode);
 
 // ! Loop Container and Display
 
-// Creating an array of the colours the switch statement above cycles through when the LVL UP button is clicked.
+// ~ Creating an array of the colours the switch statement above cycles through when the LVL UP button is clicked.
 const colourArrayToLoop = [
   'white',
   'lime',
@@ -106,20 +106,32 @@ const colourArrayToLoop = [
   'aqua',
 ];
 
-// Initialising colourList to an empty string so that when we include colourList in a loop, we can add some paragraph after paragraph (HTML) into this string
+// ~ Initialising colourList to an empty string so that when we include colourList in a loop, we can add some paragraph after paragraph (HTML) into this string
 let colourList = '';
 
-// ! For Loop
-// for (let i = 0; i < colourArrayToLoop.length; i++) {
-//   colourList += `<p style='display: inline; background-color: ${colourArrayToLoop[i]}; padding: 5px 10px; border: solid 1px black;'>${colourArrayToLoop[i]}</p><br/>`;
-// }
-
-// ! While Loop
-// Initialising index as 0 so that index in the while loop starts at the first index of the colourArrayToLoop
-let index = 0;
-while (index < colourArrayToLoop.length) {
-  colourList += `<p style='display: inline; background-color: ${colourArrayToLoop[index]}; padding: 5px 10px; border: solid 1px black;'>${colourArrayToLoop[index]}</p><br/>`;
-  index++;
+// ! For Loop - <button> - comment/uncomment to show array colours in box
+for (let i = 0; i < colourArrayToLoop.length; i++) {
+  colourList += `<button style=
+  'display: inline;
+  cursor: pointer;
+  background-color: ${colourArrayToLoop[i]};
+  padding: 5px 10px;
+  border: solid 1px black;'
+  >${colourArrayToLoop[i]}</button><br/>`;
 }
+
+// ! While Loop - <p> - comment/uncomment to show array colours in box
+// ~ Initialising index as 0 so that index in the while loop starts at the first index of the colourArrayToLoop
+// let index = 0;
+// while (index < colourArrayToLoop.length) {
+//   colourList += `<p style=
+//   'display: inline;
+//   background-color: ${colourArrayToLoop[index]};
+//   padding: 5px 10px;
+//   border: solid 1px black;'
+//   >${colourArrayToLoop[index]}</p><br/>`;
+//   // ~ Increase the index by one after creating previous paragraph
+//   index++;
+// }
 
 loopDisplay.innerHTML = colourList;
